@@ -18,7 +18,7 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
       src={imgUrl}
       alt="planet-04"
       className="absolute w-full h-full object-cover rounded-[24px]"
-      quality={95}
+      quality={80}
       width={1280}
       height={920}
     />
