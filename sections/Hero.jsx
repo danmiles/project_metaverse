@@ -41,6 +41,7 @@ const Hero = () => (
           className="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative"
           height={500}
           width={1280}
+          priority={true}
         />
 
         <a href="#explore">
