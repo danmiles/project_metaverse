@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 import styles from '../styles';
 import { fadeIn } from '../utils/motion';
@@ -13,30 +14,35 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
     } flex items-center justify-center min-w-[170px] h-[700px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer`}
     onClick={() => handleClick(id)}
   >
-    <img
+    <Image
       src={imgUrl}
       alt="planet-04"
       className="absolute w-full h-full object-cover rounded-[24px]"
+      quality={95}
+      width={1280}
+      height={920}
     />
     {active !== id ? (
-      <h3 className="font-semibold sm:text-[26px] text-[18px] text-white absolute z-0 lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0]">
+      <h3 className="font-semibold sm:text-[26px] text-[18px]  text-black md:text-white absolute z-0 lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0]">
         {title}
       </h3>
     ) : (
-      <div className="absolute bottom-0 p-8 flex justify-start w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px]">
+      <div className="absolute  bottom-0 p-0 lg:p-8 flex justify-start w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px] ">
         <div
-          className={`${styles.flexCenter} w-[60px] h-[60px] rounded-[24px] glassmorphism mb-[16px]`}
+          className={`${styles.flexCenter} w-[60px] h-[60px] rounded-[24px] mt-2 ml-5 glassmorphism mb-[16px]`}
         >
-          <img
+          <Image
             src="/headset.svg"
             alt="headset"
-            className="w-1/2 h-1/2 object-contain"
+            className="w-1/2 h-1/2 object-contain "
+            width={30}
+            height={30}
           />
         </div>
-        <p className="font-normal text-[16px] leading-[20.16px] text-white uppercase">
+        <p className="font-normal ml-5 text-[16px] leading-[20.16px] text-white uppercase">
           Enter Metaverse
         </p>
-        <h2 className="mt-[24px] font-semibold sm:text-[32px] text-[24px] text-white">
+        <h2 className="mt-[24px] ml-5 font-semibold sm:text-[32px] text-[24px] text-white">
           {title}
         </h2>
       </div>
